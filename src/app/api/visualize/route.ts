@@ -1,5 +1,7 @@
 import { Vibes } from "@/types/vibes";
 import { NextRequest, NextResponse } from "next/server";
+import { Ratelimit } from "@upstash/ratelimit";
+import { Redis } from "@upstash/redis";
 
 type VisualizeRequest = {
   imageUrl: string;
@@ -27,10 +29,22 @@ const VibeDescriptionPrefixes: Record<Vibes, string> = {
   painting: "A painting of a ",
 };
 
+const ratelimit = new Ratelimit({
+  redis: Redis.fromEnv(),
+  limiter: Ratelimit.slidingWindow(1, "1 m"),
+  analytics: true,
+});
+
 export async function POST(req: NextRequest) {
   const body = (await req.json()) as VisualizeRequest;
 
   const { imageUrl, vibe, description } = body;
+
+  console.log("img-sent-2-server", imageUrl);
+
+  const ip = req.ip as string;
+  const { success } = await ratelimit.limit(ip);
+  if (!success) return NextResponse.error();
 
   let response = await fetch("https://api.replicate.com/v1/predictions", {
     method: "POST",
@@ -54,6 +68,7 @@ export async function POST(req: NextRequest) {
   });
 
   let jsonResponse = await response.json();
+  console.log("REPLICATE-ReSPONSE", jsonResponse);
 
   let pollUrl = jsonResponse.urls.get;
   const originalImage = jsonResponse.input.image;
