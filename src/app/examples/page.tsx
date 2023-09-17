@@ -1,5 +1,17 @@
 import React from "react";
 import Image from "next/image";
+import CatOnTable from "../../../public/cat-on-table.jpg";
+import CatOnTableRealistic from "../../../public/cat-on-table-realistic.png";
+import CatOnTableAnime from "../../../public/cat-on-table-anime.png";
+import CatOnTableLowPoly from "../../../public/cat-on-table-lowpoly.png";
+import CatOnTableCartoon from "../../../public/cat-on-table-cartoon.png";
+import CatOnTablePaiting from "../../../public/cat-on-table-painting.png";
+import RaindBowInCloud from "../../../public/rainbow-in-cloud.jpg";
+import RaindBowInCloudRealistic from "../../../public/rainbow-in-cloud-realistic.png";
+import RaindBowInCloudAnime from "../../../public/rainbow-in-cloud-anime.png";
+import RaindBowInCloudLowPoly from "../../../public/rainbow-in-cloud-lowpoly.png";
+import RaindBowInCloudCartoon from "../../../public/rainbow-in-cloud-cartoon.png";
+import RaindBowInCloudPainting from "../../../public/rainbow-in-cloud-painting.png";
 
 type Props = {};
 
@@ -11,10 +23,11 @@ const ExamplesS = (props: Props) => {
         <div className="flex flex-col gap-2">
           <Image
             alt="Original Doodle"
-            src="/cat-on-table.jpg"
+            src={CatOnTable}
             className="rounded-md border border-slate-300"
             width={200}
             height={200}
+            placeholder="blur"
           />
           <span className="font-medium text-sm text-center">
             Original Doodle
@@ -23,10 +36,11 @@ const ExamplesS = (props: Props) => {
         <div className="flex flex-col gap-2">
           <Image
             alt="Transformed Doodle"
-            src="/cat-on-table-realistic.png"
+            src={CatOnTableRealistic}
             className="rounded-md border border-slate-300"
             width={200}
             height={200}
+            placeholder="blur"
           />
           <span className="font-medium text-sm text-center">
             Transformed Realistic
@@ -35,10 +49,11 @@ const ExamplesS = (props: Props) => {
         <div className="flex flex-col gap-2">
           <Image
             alt="Transformed Doodle"
-            src="/cat-on-table-anime.png"
+            src={CatOnTableAnime}
             className="rounded-md border border-slate-300"
             width={200}
             height={200}
+            placeholder="blur"
           />
           <span className="font-medium text-sm text-center">
             Transformed Anime
@@ -47,10 +62,11 @@ const ExamplesS = (props: Props) => {
         <div className="flex flex-col gap-2">
           <Image
             alt="Transformed Doodle"
-            src="/cat-on-table-lowpoly.png"
+            src={CatOnTableLowPoly}
             className="rounded-md border border-slate-300"
             width={200}
             height={200}
+            placeholder="blur"
           />
           <span className="font-medium text-sm text-center">
             Transformed Low poly
@@ -59,10 +75,11 @@ const ExamplesS = (props: Props) => {
         <div className="flex flex-col gap-2">
           <Image
             alt="Transformed Doodle"
-            src="/cat-on-table-cartoon.png"
+            src={CatOnTableCartoon}
             className="rounded-md border border-slate-300"
             width={200}
             height={200}
+            placeholder="blur"
           />
           <span className="font-medium text-sm text-center">
             Transformed Cartoon
@@ -71,10 +88,11 @@ const ExamplesS = (props: Props) => {
         <div className="flex flex-col gap-2">
           <Image
             alt="Transformed Doodle"
-            src="/cat-on-table-painting.png"
+            src={CatOnTablePaiting}
             className="rounded-md border border-slate-300"
             width={200}
             height={200}
+            placeholder="blur"
           />
           <span className="font-medium text-sm text-center">
             Transformed Paiting
@@ -86,10 +104,11 @@ const ExamplesS = (props: Props) => {
         <div className="flex flex-col gap-2">
           <Image
             alt="Original Doodle"
-            src="/rainbow-in-cloud.jpg"
+            src={RaindBowInCloud}
             className="rounded-md border border-slate-300"
             width={200}
             height={200}
+            placeholder="blur"
           />
           <span className="font-medium text-sm text-center">
             Original Doodle
@@ -98,10 +117,11 @@ const ExamplesS = (props: Props) => {
         <div className="flex flex-col gap-2">
           <Image
             alt="Transformed Doodle"
-            src="/rainbow-in-cloud-realistic.png"
+            src={RaindBowInCloudRealistic}
             className="rounded-md border border-slate-300"
             width={200}
             height={200}
+            placeholder="blur"
           />
           <span className="font-medium text-sm text-center">
             Transformed Realistic
@@ -110,10 +130,11 @@ const ExamplesS = (props: Props) => {
         <div className="flex flex-col gap-2">
           <Image
             alt="Transformed Doodle"
-            src="/rainbow-in-cloud-anime.png"
+            src={RaindBowInCloudAnime}
             className="rounded-md border border-slate-300"
             width={200}
             height={200}
+            placeholder="blur"
           />
           <span className="font-medium text-sm text-center">
             Transformed Anime
@@ -122,10 +143,11 @@ const ExamplesS = (props: Props) => {
         <div className="flex flex-col gap-2">
           <Image
             alt="Transformed Doodle"
-            src="/rainbow-in-cloud-lowpoly.png"
+            src={RaindBowInCloudLowPoly}
             className="rounded-md border border-slate-300"
             width={200}
             height={200}
+            placeholder="blur"
           />
           <span className="font-medium text-sm text-center">
             Transformed Low poly
@@ -134,10 +156,11 @@ const ExamplesS = (props: Props) => {
         <div className="flex flex-col gap-2">
           <Image
             alt="Transformed Doodle"
-            src="/rainbow-in-cloud-cartoon.png"
+            src={RaindBowInCloudCartoon}
             className="rounded-md border border-slate-300"
             width={200}
             height={200}
+            placeholder="blur"
           />
           <span className="font-medium text-sm text-center">
             Transformed Cartoon
@@ -146,10 +169,11 @@ const ExamplesS = (props: Props) => {
         <div className="flex flex-col gap-2">
           <Image
             alt="Transformed Doodle"
-            src="/rainbow-in-cloud-painting.png"
+            src={RaindBowInCloudPainting}
             className="rounded-md border border-slate-300"
             width={200}
             height={200}
+            placeholder="blur"
           />
           <span className="font-medium text-sm text-center">
             Transformed Paiting

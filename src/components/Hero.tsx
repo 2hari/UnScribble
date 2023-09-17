@@ -2,6 +2,8 @@ import clsx from "clsx";
 import Image from "next/image";
 import localFont from "next/font/local";
 import Link from "next/link";
+import OgPizzaDoodle from "../../public/pizza.jpg";
+import TransformedPizzaDoodle from "../../public/pizza-realistic.png";
 
 const clash = localFont({ src: "../app/ClashDisplay-Variable.ttf" });
 
@@ -40,10 +42,11 @@ const Hero: React.FC = () => {
         <div className="flex flex-col gap-2">
           <Image
             alt="Pizza Doodle"
-            src="/pizza.jpg"
+            src={OgPizzaDoodle}
             className="rounded-md border border-slate-300"
             width={256}
             height={256}
+            placeholder="blur"
           />
           <span className="font-medium text-sm text-center">
             Original doodle + &quot;A pizza slice&quot;
@@ -53,10 +56,11 @@ const Hero: React.FC = () => {
         <div className="flex flex-col gap-2">
           <Image
             alt="Transformed Doodle"
-            src="/pizza-realistic.png"
+            src={TransformedPizzaDoodle}
             className="rounded-md border border-slate-300"
             width={256}
             height={256}
+            placeholder="blur"
           />
           <span className="font-medium text-sm text-center">
             Transformed doodle
