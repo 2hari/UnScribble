@@ -1,8 +1,8 @@
-# ✉️ UnScribble
+# ✨ UnScribble
 
 UnScribble is a smart tool that turns messy doodles into nice drawings, photos, and paintings using AI magic.
 
-# How it works 
+# 💡 How it works 
 UnScribble uses a Stable Diffusion based AI model called ControlNet to transform your hand-drawn doodles into photos and sketches.
 You can either draw your scribble or upload an image of it, then add a short 1-3 word description, and let ControlNet work its magic.
 The AI model is deployed and run on Replicate, scribbles are stored in Cloudinary.
